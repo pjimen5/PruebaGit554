@@ -7,3 +7,12 @@ C:\Users\Interconectividad\source\repos\WFPrototipo\obj\Debug\WFPrototipo.csproj
 C:\Users\Interconectividad\source\repos\WFPrototipo\obj\Debug\WFPrototipo.exe
 C:\Users\Interconectividad\source\repos\WFPrototipo\obj\Debug\WFPrototipo.pdb
 C:\Users\Interconectividad\source\repos\WFPrototipo\obj\Debug\WFPrototipo.Form1.resources
+C:\Users\Interconectividad\Documents\GitHub\Pruebas554\WFPrototipo\bin\Debug\WFPrototipo.exe.config
+C:\Users\Interconectividad\Documents\GitHub\Pruebas554\WFPrototipo\bin\Debug\WFPrototipo.exe
+C:\Users\Interconectividad\Documents\GitHub\Pruebas554\WFPrototipo\bin\Debug\WFPrototipo.pdb
+C:\Users\Interconectividad\Documents\GitHub\Pruebas554\WFPrototipo\obj\Debug\WFPrototipo.csprojAssemblyReference.cache
+C:\Users\Interconectividad\Documents\GitHub\Pruebas554\WFPrototipo\obj\Debug\WFPrototipo.Form1.resources
+C:\Users\Interconectividad\Documents\GitHub\Pruebas554\WFPrototipo\obj\Debug\WFPrototipo.Properties.Resources.resources
+C:\Users\Interconectividad\Documents\GitHub\Pruebas554\WFPrototipo\obj\Debug\WFPrototipo.csproj.GenerateResource.cache
+C:\Users\Interconectividad\Documents\GitHub\Pruebas554\WFPrototipo\obj\Debug\WFPrototipo.exe
+C:\Users\Interconectividad\Documents\GitHub\Pruebas554\WFPrototipo\obj\Debug\WFPrototipo.pdb
