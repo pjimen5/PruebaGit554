@@ -12,6 +12,8 @@ namespace WFPrototipo
 {
     public partial class Form2 : Form
     {
+	// Estos son cambios en el forma 2.
+
         public Form2()
         {
             InitializeComponent();
