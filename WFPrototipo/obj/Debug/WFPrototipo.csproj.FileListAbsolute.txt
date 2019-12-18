@@ -26,3 +26,9 @@ C:\Users\FIEECEC\Documents\GitHub\Git554\PruebaGit554\WFPrototipo\obj\Debug\WFPr
 C:\Users\FIEECEC\Documents\GitHub\Git554\PruebaGit554\WFPrototipo\obj\Debug\WFPrototipo.csproj.CoreCompileInputs.cache
 C:\Users\FIEECEC\Documents\GitHub\Git554\PruebaGit554\WFPrototipo\obj\Debug\WFPrototipo.exe
 C:\Users\FIEECEC\Documents\GitHub\Git554\PruebaGit554\WFPrototipo\obj\Debug\WFPrototipo.pdb
+C:\Users\FIEECEC\Documents\GitHub\Git554\PruebaGit554\WFPrototipo\bin\Debug\CapaNegocios.dll
+C:\Users\FIEECEC\Documents\GitHub\Git554\PruebaGit554\WFPrototipo\bin\Debug\CapaNegocios.pdb
+C:\Users\FIEECEC\Documents\GitHub\Git554\PruebaGit554\WFPrototipo\obj\Debug\WFPrototipo.csproj.CopyComplete
+C:\Users\FIEECEC\Documents\GitHub\Git554\PruebaGit554\WFPrototipo\bin\Debug\CapaDatos.dll
+C:\Users\FIEECEC\Documents\GitHub\Git554\PruebaGit554\WFPrototipo\bin\Debug\CapaDatos.pdb
+C:\Users\FIEECEC\Documents\GitHub\Git554\PruebaGit554\WFPrototipo\obj\Debug\WFPrototipo.Form4.resources

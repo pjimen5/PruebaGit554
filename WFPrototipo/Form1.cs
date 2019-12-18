@@ -7,17 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaNegocios;
 
 namespace WFPrototipo
 {
+    
     public partial class Form1 : Form
     {
-     // Estos son los cambios online en la forma 1
+        // Estos son los cambios online en la forma 1
+        List<Persona> personas = new List<Persona>();
         public Form1()
         {
             InitializeComponent();
         }
-
+        
         private void btnSaludo_Click(object sender, EventArgs e)
         {
             if (txtNombre.Text.Length == 0 || txtLugar.Text.Length == 0)
@@ -47,6 +50,47 @@ namespace WFPrototipo
         private void DateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             dateTimePicker2.Value = dateTimePicker1.Value.AddDays(Convert.ToInt32(textBox1.Text));
+        }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnAgregar_Click(object sender, EventArgs e)
+        {
+            lbxPersonas.Items.Add((new Persona(txtNombre.Text,txtLugar.Text)).ImprimirPersona());
+            personas.Add(new Persona(txtNombre.Text, txtLugar.Text));
+
+          //  DataTable dtPersonas = ConvertListPersonaToDatatable();
+           // dataGridView1.DataSource = dtPersonas;
+
+        }
+
+        private DataTable ConvertListPersonaToDatatable() {
+            DataTable table = new DataTable();
+
+            int columns = 2; // nombre y lugar
+            
+            for (int i = 0; i < columns; i++)
+            {
+                table.Columns.Add();
+            }
+
+            // Add rows.
+            foreach (var array in personas)
+            {
+              /*  List<String> celdas = new List<String>();
+                celdas.Add(new string[] ({array.nombre,array.lugarNac}));
+                DataRow dr = new DataRow();
+                dr.a
+                table.Rows.Add()
+                table.Rows.Add(celdas);*/
+            }
+
+            return table;
+
+
         }
     }
 }

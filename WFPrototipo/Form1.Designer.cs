@@ -41,12 +41,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lbxPersonas = new System.Windows.Forms.ListBox();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(58, 39);
+            this.label1.Location = new System.Drawing.Point(56, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 0;
@@ -55,22 +59,23 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(58, 71);
+            this.label2.Location = new System.Drawing.Point(56, 47);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 13);
+            this.label2.Size = new System.Drawing.Size(106, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Lugar:";
+            this.label2.Text = "Lugar de nacimiento:";
+            this.label2.Click += new System.EventHandler(this.Label2_Click);
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(112, 36);
+            this.txtNombre.Location = new System.Drawing.Point(172, 12);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(378, 20);
+            this.txtNombre.Size = new System.Drawing.Size(316, 20);
             this.txtNombre.TabIndex = 2;
             // 
             // txtLugar
             // 
-            this.txtLugar.Location = new System.Drawing.Point(112, 68);
+            this.txtLugar.Location = new System.Drawing.Point(172, 44);
             this.txtLugar.Name = "txtLugar";
             this.txtLugar.Size = new System.Drawing.Size(169, 20);
             this.txtLugar.TabIndex = 3;
@@ -108,8 +113,7 @@
             this.monthCalendar1.BoldedDates = new System.DateTime[] {
         new System.DateTime(2019, 12, 3, 0, 0, 0, 0),
         new System.DateTime(2019, 12, 4, 0, 0, 0, 0)};
-            this.monthCalendar1.CalendarDimensions = new System.Drawing.Size(2, 2);
-            this.monthCalendar1.Location = new System.Drawing.Point(502, 18);
+            this.monthCalendar1.Location = new System.Drawing.Point(452, 43);
             this.monthCalendar1.MaxSelectionCount = 15;
             this.monthCalendar1.MonthlyBoldedDates = new System.DateTime[] {
         new System.DateTime(2019, 12, 20, 0, 0, 0, 0)};
@@ -160,11 +164,40 @@
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 14;
             // 
+            // lbxPersonas
+            // 
+            this.lbxPersonas.FormattingEnabled = true;
+            this.lbxPersonas.Location = new System.Drawing.Point(42, 224);
+            this.lbxPersonas.Name = "lbxPersonas";
+            this.lbxPersonas.Size = new System.Drawing.Size(171, 95);
+            this.lbxPersonas.TabIndex = 15;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(134, 112);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.TabIndex = 16;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(233, 224);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(218, 95);
+            this.dataGridView1.TabIndex = 17;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(846, 339);
+            this.ClientSize = new System.Drawing.Size(650, 331);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.lbxPersonas);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -180,6 +213,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,6 +234,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ListBox lbxPersonas;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
