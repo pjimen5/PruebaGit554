@@ -32,6 +32,20 @@ namespace WFPrototipo
             lblSaludo.Text = "";
         }
 
+        private void Label3_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void MonthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            dateTimePicker1.Value = monthCalendar1.SelectionStart;
+            dateTimePicker2.Value = monthCalendar1.SelectionEnd;
+        }
+
+        private void DateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            dateTimePicker2.Value = dateTimePicker1.Value.AddDays(Convert.ToInt32(textBox1.Text));
+        }
     }
 }
