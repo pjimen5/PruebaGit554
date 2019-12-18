@@ -12,6 +12,7 @@ namespace WFPrototipo
 {
     public partial class Form1 : Form
     {
+     // Estos son los cambios online en la forma 1
         public Form1()
         {
             InitializeComponent();

@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace WFPrototipo
 {
-    public partial class Form2 : Form
+    public partial class Form3 : Form
     {
-	// Estos son cambios en el forma 2.
-
-        public Form2()
+     // Estos son los cambios online en la forma 3
+     // Quiero actualizar mi otra branch. Priscilla
+        public Form3()
         {
             InitializeComponent();
         }
