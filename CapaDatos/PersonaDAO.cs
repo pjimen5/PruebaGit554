@@ -4,20 +4,22 @@ using System.Data.SqlClient;
 
 namespace CapaDatos
 {   
-    class PersonaDAO: ManejadorDB
+    class PersonaDAO
     {
+       private ManejadorDB conexion = new ManejadorDB();
+        
        SqlDataReader leerRegistros;
+       DataTable tabla = new DataTable();
        SqlCommand comando = new SqlCommand();
        
          //Metodos CRUD
        public List<PersonaDto> VerRegistros(string _condicion)
        {
-           comando.Connection = Conexion;
+           comando.Connection = conexion.AbrirConexion();
            comando.CommandText = "VerRegistros";
            comando.CommandType = CommandType.StoredProcedure;
            comando.Parameters.AddWithValue("@Condicion",_condicion);
-           Conexion.Open();
-           leerRegistros = Comando.ExecuteReader();
+           leerRegistros = comando.ExecuteReader();
            List<PersonaDto> listaPersonas = new List<PersonaDto>();
            while (leerRegistros.Read())
            {
