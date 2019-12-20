@@ -16,6 +16,8 @@ namespace WFPrototipo
     {
         // Estos son los cambios online en la forma 1
         List<Persona> personas = new List<Persona>();
+
+        Persona persona = new Persona();
         public Form1()
         {
             InitializeComponent();
@@ -62,8 +64,8 @@ namespace WFPrototipo
             lbxPersonas.Items.Add((new Persona(txtNombre.Text,txtLugar.Text)).ImprimirPersona());
             personas.Add(new Persona(txtNombre.Text, txtLugar.Text));
 
-          //  DataTable dtPersonas = ConvertListPersonaToDatatable();
-           // dataGridView1.DataSource = dtPersonas;
+            DataTable dtPersonas = persona.listaPersonas();
+            dataGridView1.DataSource = dtPersonas;
 
         }
 

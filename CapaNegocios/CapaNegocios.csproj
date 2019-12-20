@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CapaDatos\CapaDatos.csproj" />
+    <ProjectReference Include="..\DAOCapa\DAOCapa.csproj" />
   </ItemGroup>
 
 </Project>
