@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CapaNegocios;
+using CapaLogica;
 
 namespace WFPrototipo
 {
@@ -61,14 +61,19 @@ namespace WFPrototipo
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
+            Persona newPersona = new Persona(txtNombre.Text, txtLugar.Text);
             lbxPersonas.Items.Add((new Persona(txtNombre.Text,txtLugar.Text)).ImprimirPersona());
-            personas.Add(new Persona(txtNombre.Text, txtLugar.Text));
+            personas.Add(newPersona);
+            Console.WriteLine(newPersona.registrarPersona());
 
             DataTable dtPersonas = persona.listaPersonas();
             dataGridView1.DataSource = dtPersonas;
-
         }
-
+        private void btnMSql_Click(object sender, EventArgs e)
+        {
+            DataTable dtPersonas = persona.listaPersonas();
+            dataGridView1.DataSource = dtPersonas;
+        }
         private DataTable ConvertListPersonaToDatatable() {
             DataTable table = new DataTable();
 
@@ -93,6 +98,20 @@ namespace WFPrototipo
             return table;
 
 
+        }
+
+     
+
+        private void btnMySQL_Click(object sender, EventArgs e)
+        {
+            DataTable dtPersonas = persona.listaPersonas2();
+            dataGridView1.DataSource = dtPersonas;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           // DataTable dtPersonas = persona.listaPersonas3();
+            //dataGridView1.DataSource = dtPersonas;
         }
     }
 }

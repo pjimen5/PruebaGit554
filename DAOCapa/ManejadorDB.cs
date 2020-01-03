@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
-
+using MySql.Data.MySqlClient;
 
 namespace DAOCapa
 {
@@ -13,9 +13,9 @@ namespace DAOCapa
     {
         // Se escribe la variable de conexión.
         // Metodo para abrir la conexión
-         protected SqlConnection Conexion = new SqlConnection("Server=.;Database=NOMBRE_DE_BD;Integrated Security=True");
-    //   protected SqlConnection Conexion = new SqlConnection("server=localhost;user id = root; database=itir554");
-     
+      protected SqlConnection Conexion = new SqlConnection("Server=1-17-6-FCEC3-00\\SQLEXPRESS;Database=itir554;Integrated Security=True");
+      protected MySqlConnection mConexion = new MySqlConnection("server=localhost;uid = root; pwd=dba554;database=itir554");
+
         //Servidor: 1-17-6-FCEC3-00\SQLEXPRESS 
 
         // Metodo para abrir la conexión
@@ -29,6 +29,18 @@ namespace DAOCapa
         {
             if (Conexion.State == ConnectionState.Open)
                 Conexion.Close();
+        }
+
+        public void AbrirConexionMySQL()
+        {
+            if (mConexion.State == ConnectionState.Closed)
+                mConexion.Open();
+        }
+        // Metodo para cerrar la conexión
+        public void CerrarConexionMySQL()
+        {
+            if (mConexion.State == ConnectionState.Open)
+                mConexion.Close();
         }
 
         // Metodo para ejecutar procedures - Insert, Delete, Update
@@ -71,6 +83,44 @@ namespace DAOCapa
             CerrarConexion();
         }
 
+        public void EjecutarProcedimientoMySQL(String _nombreproc, List<ParametrosDB> _lstParametros)
+        {
+            MySqlCommand mysqlcmd;
+            try
+            {
+                AbrirConexionMySQL();
+                mysqlcmd = new MySqlCommand(_nombreproc, mConexion);
+                mysqlcmd.CommandType = CommandType.StoredProcedure;
+
+                if (_lstParametros != null)
+                {
+                    //Asigna los parametros necesarios para la ejecución del procedimiento
+                    for (int i = 0; i < _lstParametros.Count; i++)
+                    {
+
+                        if (_lstParametros[i].parDBdirection == ParameterDirection.Input)
+                              mysqlcmd.Parameters.Add(new MySqlParameter(_lstParametros[i].nombre, _lstParametros[i].valor));
+
+                        if (_lstParametros[i].parDBdirection == ParameterDirection.Output)
+                            mysqlcmd.Parameters.Add(_lstParametros[i].nombre, _lstParametros[i].tipoDato2, _lstParametros[i].tamano).Direction = ParameterDirection.Output;
+
+                    }
+                    mysqlcmd.ExecuteNonQuery();
+                    // Recupera parametros de salida
+                    for (int i = 0; i < _lstParametros.Count; i++)
+                    {
+                        if (_lstParametros[i].parDBdirection == ParameterDirection.Output)
+                            _lstParametros[i].valor = mysqlcmd.Parameters[i].Value.ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
+            CerrarConexionMySQL();
+        }
 
         // Metodo para hacer consultas
         public DataTable registros(String _nombreproc, List<ParametrosDB> _lstParametros)
@@ -84,6 +134,34 @@ namespace DAOCapa
                 sqlda.SelectCommand.CommandType = CommandType.StoredProcedure;
 
                 if (_lstParametros != null) {
+                    for (int i = 0; i < _lstParametros.Count; i++)
+                    {
+                        sqlda.SelectCommand.Parameters.AddWithValue(_lstParametros[i].nombre, _lstParametros[i].valor);
+
+                    }
+                }
+                sqlda.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return dt;
+        }
+
+        public DataTable registrosMySQL(String _nombreproc, List<ParametrosDB> _lstParametros)
+        {
+            DataTable dt = new DataTable();
+            MySqlDataAdapter sqlda;
+
+            try
+            {
+
+                sqlda = new MySqlDataAdapter(_nombreproc, mConexion);
+                sqlda.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+                if (_lstParametros != null)
+                {
                     for (int i = 0; i < _lstParametros.Count; i++)
                     {
                         sqlda.SelectCommand.Parameters.AddWithValue(_lstParametros[i].nombre, _lstParametros[i].valor);

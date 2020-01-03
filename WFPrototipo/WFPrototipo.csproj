@@ -91,9 +91,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CapaNegocios\CapaNegocios.csproj">
-      <Project>{d7a9a64f-1839-4b2a-8d6b-909ff162b8bb}</Project>
-      <Name>CapaNegocios</Name>
+    <ProjectReference Include="..\CapaLogica\CapaLogica.csproj">
+      <Project>{7e95f9b8-cf2b-4fb2-a4e4-488c93ec05c4}</Project>
+      <Name>CapaLogica</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

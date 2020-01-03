@@ -44,6 +44,9 @@
             this.lbxPersonas = new System.Windows.Forms.ListBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnMSql = new System.Windows.Forms.Button();
+            this.btnMySQL = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,7 +73,7 @@
             // 
             this.txtNombre.Location = new System.Drawing.Point(172, 12);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(316, 20);
+            this.txtNombre.Size = new System.Drawing.Size(268, 20);
             this.txtNombre.TabIndex = 2;
             // 
             // txtLugar
@@ -113,7 +116,7 @@
             this.monthCalendar1.BoldedDates = new System.DateTime[] {
         new System.DateTime(2019, 12, 3, 0, 0, 0, 0),
         new System.DateTime(2019, 12, 4, 0, 0, 0, 0)};
-            this.monthCalendar1.Location = new System.Drawing.Point(452, 43);
+            this.monthCalendar1.Location = new System.Drawing.Point(452, 12);
             this.monthCalendar1.MaxSelectionCount = 15;
             this.monthCalendar1.MonthlyBoldedDates = new System.DateTime[] {
         new System.DateTime(2019, 12, 20, 0, 0, 0, 0)};
@@ -169,7 +172,7 @@
             this.lbxPersonas.FormattingEnabled = true;
             this.lbxPersonas.Location = new System.Drawing.Point(42, 224);
             this.lbxPersonas.Name = "lbxPersonas";
-            this.lbxPersonas.Size = new System.Drawing.Size(171, 95);
+            this.lbxPersonas.Size = new System.Drawing.Size(171, 199);
             this.lbxPersonas.TabIndex = 15;
             // 
             // btnAgregar
@@ -184,17 +187,51 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(233, 224);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(218, 95);
+            this.dataGridView1.Size = new System.Drawing.Size(411, 199);
             this.dataGridView1.TabIndex = 17;
+            // 
+            // btnMSql
+            // 
+            this.btnMSql.Location = new System.Drawing.Point(340, 195);
+            this.btnMSql.Name = "btnMSql";
+            this.btnMSql.Size = new System.Drawing.Size(100, 23);
+            this.btnMSql.TabIndex = 18;
+            this.btnMSql.Text = "Mostrar SqlServer";
+            this.btnMSql.UseVisualStyleBackColor = true;
+            this.btnMSql.Click += new System.EventHandler(this.btnMSql_Click);
+            // 
+            // btnMySQL
+            // 
+            this.btnMySQL.Location = new System.Drawing.Point(446, 195);
+            this.btnMySQL.Name = "btnMySQL";
+            this.btnMySQL.Size = new System.Drawing.Size(107, 23);
+            this.btnMySQL.TabIndex = 19;
+            this.btnMySQL.Text = "MostrarMySQL";
+            this.btnMySQL.UseVisualStyleBackColor = true;
+            this.btnMySQL.Click += new System.EventHandler(this.btnMySQL_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(559, 195);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(85, 23);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "LinQToSQL";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(650, 331);
+            this.ClientSize = new System.Drawing.Size(650, 428);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnMySQL);
+            this.Controls.Add(this.btnMSql);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.lbxPersonas);
@@ -237,6 +274,9 @@
         private System.Windows.Forms.ListBox lbxPersonas;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnMSql;
+        private System.Windows.Forms.Button btnMySQL;
+        private System.Windows.Forms.Button button2;
     }
 }
 

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using MySql.Data.MySqlClient;
 
 namespace DAOCapa
 {
@@ -12,6 +13,7 @@ namespace DAOCapa
         public String nombre { get; set; }
         public Object valor { get; set; }
         public SqlDbType tipoDato { get; set; }
+        public MySqlDbType tipoDato2 { get; set; }
         public Int32 tamano { get; set; }
         
         public ParameterDirection parDBdirection { get; set; }
@@ -27,6 +29,14 @@ namespace DAOCapa
         {
             nombre = _nombre;
             tipoDato = _tipoDato;
+            tamano = _tamano;
+            parDBdirection = ParameterDirection.Output;
+
+        }
+        public ParametrosDB(string _nombre, MySqlDbType _tipoDato, Int32 _tamano)
+        {
+            nombre = _nombre;
+            tipoDato2 = _tipoDato;
             tamano = _tamano;
             parDBdirection = ParameterDirection.Output;
 

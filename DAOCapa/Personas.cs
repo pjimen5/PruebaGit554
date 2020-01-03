@@ -3,12 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
+
 
 namespace DAOCapa
 {
-    class PersonaDAO
-    {/*
+    public class Personas
+    {
+        String per_nombre;
+        String per_lugarNac;
+
+        public string Per_nombre { get => per_nombre; set => per_nombre = value; }
+        public string Per_lugarNac { get => per_lugarNac; set => per_lugarNac = value; }
+
+
+        /*
         private ManejadorDB conexion = new ManejadorDB();
 
         SqlDataReader leerRegistros;
@@ -37,5 +45,5 @@ namespace DAOCapa
 
     }*/
 
-}
+    }
 }

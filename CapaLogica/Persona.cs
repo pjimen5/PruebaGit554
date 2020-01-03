@@ -2,8 +2,10 @@
 using DAOCapa;
 using System.Data;
 using System.Collections.Generic;
+using MySql.Data.MySqlClient;
+using System.Linq;
 
-namespace CapaNegocios
+namespace CapaLogica
 {
     public class Persona
     {
@@ -39,7 +41,7 @@ namespace CapaNegocios
 
                 mDB.EjecutarProcedimiento("RegistrarPersona", lstparametros);
  
-                msj = lstparametros[0].valor.ToString();
+                msj = lstparametros[2].valor.ToString();
             }
             catch(Exception ex)
             {
@@ -56,10 +58,10 @@ namespace CapaNegocios
             try
             {
                 //parametros de entrada
-                lstparametros.Add(new ParametrosDB("nombre", nombre));
-                lstparametros.Add(new ParametrosDB("lugarNac", lugarNac));
+                lstparametros.Add(new ParametrosDB("@nombre", nombre));
+                lstparametros.Add(new ParametrosDB("@lugarNac", lugarNac));
                 //parametros de salida
-                lstparametros.Add(new ParametrosDB("mensaje", SqlDbType.VarChar, 100));
+                lstparametros.Add(new ParametrosDB("@mensaje", MySqlDbType.VarChar, 100));
 
                 mDB.EjecutarProcedimientoMySQL("RegistrarPersona", lstparametros);
 
@@ -74,6 +76,19 @@ namespace CapaNegocios
         }
         public DataTable listaPersonas() {
             return mDB.registros("ListadoPersonas", null);
+        }
+        public DataTable listaPersonas2()
+        {
+            return mDB.registrosMySQL("ListadoPersonas", null);
+        }
+
+        public void listaPersonas3()
+        {
+         /*   LinQToSQLDataContext context = new LinQToSQLDataContext();
+
+            IEnumerable<DataRow> query = from per in context.Persona select per;
+            return query.CopyToDataTable<DataRow>();
+*/
         }
     }
 
