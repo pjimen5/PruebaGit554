@@ -75,6 +75,7 @@ namespace CapaLogica
             return msj;
         }
         public DataTable listaPersonas() {
+            mDB.listarPersonas();
             return mDB.registros("ListadoPersonas", null);
         }
         public DataTable listaPersonas2()

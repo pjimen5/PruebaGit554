@@ -15,6 +15,8 @@ namespace DAOCapa
         public string Per_nombre { get => per_nombre; set => per_nombre = value; }
         public string Per_lugarNac { get => per_lugarNac; set => per_lugarNac = value; }
 
+        public void listarPersonas(    )
+        { }
 
         /*
         private ManejadorDB conexion = new ManejadorDB();

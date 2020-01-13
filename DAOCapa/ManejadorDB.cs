@@ -177,5 +177,88 @@ namespace DAOCapa
             return dt;
         }
 
+        public void listarPersonas()
+        {
+            SqlCommand sqlcmd;
+            String sqlstr="select * from Persona";
+
+            try
+            {
+                AbrirConexion();
+                sqlcmd = new SqlCommand(sqlstr,Conexion);
+
+                using (SqlDataReader reader = sqlcmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        //Se obtienen los datos que se reciben de la base de datos
+                        Console.WriteLine(String.Format("{0}, {1}",
+                  reader[0], reader[1]));
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
+            CerrarConexion();
+        }
+
+        public void listarPersonas2()
+        {
+            SqlCommand sqlcmd;
+            String sqlstr = "select * from Persona";
+
+            try
+            {
+                AbrirConexion();
+                sqlcmd = new SqlCommand(sqlstr, Conexion);
+
+                using (SqlDataReader reader = sqlcmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        //Se obtienen los datos que se reciben de la base de datos
+                        Console.WriteLine(String.Format("{0}, {1}",
+                  reader[0], reader[1]));
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
+            CerrarConexion();
+        }
+
+        public void CrearPersona()
+        {
+            SqlCommand sqlcmd;
+            String sqlstr = "select * from Persona";
+
+            try
+            {
+                AbrirConexion();
+                sqlcmd = new SqlCommand(sqlstr, Conexion);
+
+                using (SqlDataReader reader = sqlcmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        //Se obtienen los datos que se reciben de la base de datos
+                        Console.WriteLine(String.Format("{0}, {1}",
+                  reader[0], reader[1]));
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
+            CerrarConexion();
+        }
     }
 }

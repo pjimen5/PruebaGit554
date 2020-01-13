@@ -73,6 +73,7 @@ namespace WFPrototipo
         {
             DataTable dtPersonas = persona.listaPersonas();
             dataGridView1.DataSource = dtPersonas;
+
         }
         private DataTable ConvertListPersonaToDatatable() {
             DataTable table = new DataTable();
