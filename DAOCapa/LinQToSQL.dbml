@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="itir554" Class="LinQToSQLDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=1-17-6-FCEC3-00\SQLEXPRESS;Initial Catalog=itir554;Integrated Security=True" SettingsObjectName="DAOCapa.Properties.Settings" SettingsPropertyName="itir554ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Persona" Member="Persona">
+    <Type Name="Persona">
+      <Column Name="per_nombre" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="per_lugarNacimiento" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.ListadoPersonas" Method="ListadoPersonas">
+    <ElementType Name="ListadoPersonasResult">
+      <Column Name="per_nombre" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="per_lugarNacimiento" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.RegistrarPersona" Method="RegistrarPersona">
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="lugarNac" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="mensaje" Type="System.String" DbType="VarChar(100)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29519.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WFPrototipo", "WFPrototipo.csproj", "{CEFA79E0-C89C-4A68-A0C6-FCBA59BD5C58}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAOCapa", "..\DAOCapa\DAOCapa.csproj", "{63731588-C123-4B30-AAE7-E5B8F316CFA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaLogica", "..\CapaLogica\CapaLogica.csproj", "{7E95F9B8-CF2B-4FB2-A4E4-488C93EC05C4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{CEFA79E0-C89C-4A68-A0C6-FCBA59BD5C58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEFA79E0-C89C-4A68-A0C6-FCBA59BD5C58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEFA79E0-C89C-4A68-A0C6-FCBA59BD5C58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63731588-C123-4B30-AAE7-E5B8F316CFA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63731588-C123-4B30-AAE7-E5B8F316CFA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63731588-C123-4B30-AAE7-E5B8F316CFA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63731588-C123-4B30-AAE7-E5B8F316CFA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E95F9B8-CF2B-4FB2-A4E4-488C93EC05C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E95F9B8-CF2B-4FB2-A4E4-488C93EC05C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E95F9B8-CF2B-4FB2-A4E4-488C93EC05C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E95F9B8-CF2B-4FB2-A4E4-488C93EC05C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
