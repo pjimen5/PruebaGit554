@@ -62,12 +62,20 @@ namespace WFPrototipo
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             Persona newPersona = new Persona(txtNombre.Text, txtLugar.Text);
-            lbxPersonas.Items.Add((new Persona(txtNombre.Text,txtLugar.Text)).ImprimirPersona());
-            personas.Add(newPersona);
-            Console.WriteLine(newPersona.registrarPersona());
+            try
+            {
+                lbxPersonas.Items.Add((new Persona(txtNombre.Text, txtLugar.Text)).ImprimirPersona());
+                personas.Add(newPersona);
 
-            DataTable dtPersonas = persona.listaPersonas();
-            dataGridView1.DataSource = dtPersonas;
+                Console.WriteLine(newPersona.registrarPersona());
+
+                DataTable dtPersonas = persona.listaPersonas();
+                dataGridView1.DataSource = dtPersonas;
+            }
+            catch (ArgumentNullException)
+            {
+                MessageBox.Show("Para agregar la información, debe ingresar al menos un nombre.");
+            }
         }
         private void btnMSql_Click(object sender, EventArgs e)
         {

@@ -23,9 +23,18 @@ namespace CapaLogica
 
         public String ImprimirPersona()
         {
-            return nombre + " de " + lugarNac;
+            //if ("".Equals(nombre))
+            //    throw new System.ArgumentNullException();
+            //if (!("".Equals(lugarNac)))
+                return nombre + " de " + lugarNac;
+            //return nombre;
         }
 
+        public int CalcularLevenshtein(String cadena1, String cadena2) {
+
+
+            return -1;
+        }
     
 
         public String registrarPersona()
@@ -50,7 +59,7 @@ namespace CapaLogica
 
             return msj;
         }
-
+        
         public String registrarPersona2()
         {
             String msj = "";
