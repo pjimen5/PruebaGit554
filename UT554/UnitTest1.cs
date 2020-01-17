@@ -79,7 +79,7 @@ namespace UT554
         public void ImprimirPersona_PriscillaYVacio_DebeRetornarPriscilla()
         {
             String strNombre = "Priscilla";
-            String strLugarNac = "";
+            String strLugarNac = " ";
             String valorEsperado = "Priscilla";
 
             CapaLogica.Persona persona = new CapaLogica.Persona(strNombre, strLugarNac);
@@ -94,7 +94,7 @@ namespace UT554
         [ExpectedException(typeof(ArgumentNullException))]
         public void ImprimirPersona_VacioYCualquierEntrada_DebeRetornarException()
         {
-            String strNombre = "";
+            String strNombre = null;
             String strLugarNac = "";
        
 

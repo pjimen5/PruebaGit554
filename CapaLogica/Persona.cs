@@ -23,11 +23,11 @@ namespace CapaLogica
 
         public String ImprimirPersona()
         {
-            //if ("".Equals(nombre))
-            //    throw new System.ArgumentNullException();
-            //if (!("".Equals(lugarNac)))
+            if (String.IsNullOrEmpty(nombre) || String.IsNullOrWhiteSpace(nombre))
+                throw new System.ArgumentNullException();
+            if (!(String.IsNullOrEmpty(lugarNac) || String.IsNullOrWhiteSpace(lugarNac)))
                 return nombre + " de " + lugarNac;
-            //return nombre;
+            return nombre;
         }
 
         public int CalcularLevenshtein(String cadena1, String cadena2) {
